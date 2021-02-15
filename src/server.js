@@ -20,5 +20,5 @@ server.db = router.db;
 server.use(rules);
 server.use(auth);
 server.use('/api', router);
-
-server.listen(3333, () => console.log('Running on http://localhost:3333'));
+console.log(process.env.PORT);
+server.listen(process.env.PORT || 3333, () => console.log('Running on http://localhost:3333'));
